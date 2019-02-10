@@ -1,0 +1,20 @@
+language: go
+
+go:
+- 1.10.x
+
+go_import_path: github.com/jroucheton/helm-trash
+
+install:
+
+script:
+- make dist
+
+deploy:
+- provider: releases
+  api_key: ${GITHUB_TOKEN}
+  file: _dist/helm-trash*
+  skip_cleanup: true
+  file_glob: true
+  on:
+    tags: true

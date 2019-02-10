@@ -1,0 +1,7 @@
+name: "trash"
+version: ":VERSION:"
+usage: "delete releases previously deployed through helm spray"
+description: "Helm plugin for deleting releases previously deployed through helm spray"
+ignoreFlags: false
+useTunnel: false
+command: "$HELM_PLUGIN_DIR/:BINARY:"
